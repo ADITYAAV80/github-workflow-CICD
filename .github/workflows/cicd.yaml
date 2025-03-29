@@ -39,6 +39,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name: Build and push the docker image
         id: build-and-push
         uses: docker/build-push-action@v4
